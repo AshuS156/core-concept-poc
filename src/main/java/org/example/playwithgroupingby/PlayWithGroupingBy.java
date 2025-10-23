@@ -16,6 +16,11 @@ public class PlayWithGroupingBy{
         groupByWithTwoParam(employeeMaps);
         groupByWithThreeParam(employeeMaps);
 
+        final Map<String, Set<String>> collect = employeeMaps.stream()
+                .collect(Collectors.groupingBy(EmployeeMap::getEmail,
+                                               Collectors.mapping(EmployeeMap::getFirstName,Collectors.toSet())));
+        System.out.println("Grouping with mapping : "+ collect);
+
     }
 
     private static void groupByWithOneParam(List<EmployeeMap> employeeMaps){

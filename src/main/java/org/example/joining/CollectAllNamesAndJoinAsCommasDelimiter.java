@@ -3,6 +3,7 @@ package org.example.joining;
 import org.example.playwithmap.EmployeeMap;
 import org.example.playwithmap.EmployeeMapUtils;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,10 @@ public class CollectAllNamesAndJoinAsCommasDelimiter{
         final String collect = employeeMaps.stream()
                 .map(emp -> emp.getFirstName().toUpperCase().concat( " ").concat(emp.getLastName().toUpperCase())).collect(Collectors.joining(",  "));
         System.out.println(collect);
+
+        List<String> al = Arrays.asList("A", "B", "C", "D", "E");
+        final String collect1 = al.stream().collect(Collectors.joining(","));
+        System.out.println(collect1);
 
     }
 }
