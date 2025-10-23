@@ -1,4 +1,4 @@
-package org.example.interviewquestions;
+package org.example.importantinterviewquestions;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

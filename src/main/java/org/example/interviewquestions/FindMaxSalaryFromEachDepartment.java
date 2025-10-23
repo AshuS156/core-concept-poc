@@ -2,7 +2,7 @@ package org.example.interviewquestions;
 
 import org.example.playwithsorting.Employee;
 import org.example.playwithsorting.EmployeeDBUtils;
-import org.example.playwithsorting.comparator.*;
+
 
 import java.util.Comparator;
 import java.util.List;

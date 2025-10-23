@@ -3,7 +3,6 @@ package org.example.interviewquestions;
 
 import org.example.playwithsorting.Employee;
 import org.example.playwithsorting.EmployeeDBUtils;
-import org.example.playwithsorting.comparator.*;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.List;

@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class ReportGeneration{
     public static void main(String[] args){
         final List<Order> orders = OrderUtils.getOrders();
-//1.
+     // 1.  For all orders placed in the last 24 hours with a total value greater than $500, generate a report that summarizes the total quantity of products sold per category, considering only products that are in stock. The report should provide the category name along with the total quantity sold, as well as statistics such as average, minimum, maximum, and count of products sold in each category.
         final Map<String, IntSummaryStatistics> collect = orders.stream().filter(order -> order.getOrderTime().isAfter(LocalDateTime.now().minusHours(24)))
                 .filter(order -> order.getTotalValue() > 500)
                 .flatMap(order -> order.getProducts().stream())
@@ -20,7 +20,7 @@ public class ReportGeneration{
                 .collect(Collectors.groupingBy(Product::getCategory,Collectors.summarizingInt(Product::getQuantity)));
         System.out.println(collect);
 
-        //2.
+        //2. For all orders placed in the last 24 hours with a total value greater than $500, generate a report that summarizes the total quantity of products sold per category, considering only products that are in stock. The report should provide the category name along with the total quantity sold.
         final Map<String, Integer> collect1 = orders.stream().filter(order -> order.getOrderTime().isAfter(LocalDateTime.now().minusHours(24)))
                 .filter(order -> order.getTotalValue() > 500)
                 .flatMap(order -> order.getProducts().stream())
@@ -29,7 +29,7 @@ public class ReportGeneration{
         System.out.println(collect1);
 
 
-        //3.
+        //3. For all orders placed in the last 24 hours with a total value greater than $500, generate a report that summarizes the total quantity of products sold per category, considering only products that are in stock. The report should provide the category name along with the total quantity sold, sorted in descending order of quantity.
 
         final LinkedHashMap<String, Integer> collect2 = orders.stream().filter(order -> order.getOrderTime().isAfter(LocalDateTime.now().minusHours(24)))
                 .filter(order -> order.getTotalValue() > 500)
@@ -43,6 +43,7 @@ public class ReportGeneration{
 
 
         // populate all Products which are out of stocks
+        // 4. For all orders placed in the last 24 hours with a total value greater than $500, generate a report that summarizes the total quantity of products sold per category, considering only products that are in stock. The report should provide the category name along with the total quantity sold, sorted in descending order of quantity.
         final List<Product> collect3 = orders.stream().flatMap(order -> order.getProducts().stream())
                 .filter(product -> BooleanUtils.isFalse(product.isStocks())).collect(Collectors.toList());
         System.out.println(collect3);

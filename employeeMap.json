@@ -2,7 +2,7 @@
   {
     "employeeId": "59-385-1088",
     "firstName": "Zacharias",
-    "lastName": "Schwerin",
+    "lastName": null,
     "email": "zschwerin0@altervista.org",
     "gender": "Male",
     "newJoiner": "TRUE",
@@ -14,7 +14,7 @@
   {
     "employeeId": "73-274-6476",
     "firstName": "Kyle",
-    "lastName": "Frudd",
+    "lastName": null,
     "email": "kfrudd1@ovh.net",
     "gender": "Male",
     "newJoiner": "FALSE",

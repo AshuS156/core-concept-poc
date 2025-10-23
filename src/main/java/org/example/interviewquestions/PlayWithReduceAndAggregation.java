@@ -1,7 +1,6 @@
 package org.example.interviewquestions;
 
 import org.example.playwithsorting.EmployeeDBUtils;
-import org.example.playwithsorting.comparator.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
