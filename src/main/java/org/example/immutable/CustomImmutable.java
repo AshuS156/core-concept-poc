@@ -13,6 +13,7 @@ public final class  CustomImmutable{
     public CustomImmutable(String name, Double salary, Date dob) {
         this.name = name;
         this.salary = salary;
+        // Defensive copy to maintain immutability
         this.dob = dob != null ? new Date(dob.getTime()) : null;
     }
 
