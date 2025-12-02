@@ -16,6 +16,8 @@ public class GroupingWithMappings{
                                                Collectors.mapping(EmployeeMap::getFirstName, Collectors.toList())));
         System.out.println("Grouping with mapping : "+ collect);
 
+        final Map<String, String> collect1 = employeeMaps.stream().collect(Collectors.toMap(EmployeeMap::getEmail,EmployeeMap::getFirstName,(ob1,ob2) -> ob2));
+        System.out.println("Grouping with mapping : "+ collect1);
     }
 
 }

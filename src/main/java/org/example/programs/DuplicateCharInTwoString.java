@@ -1,8 +1,8 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DuplicateCharInTwoString{
     public static void main(String[] args){
@@ -13,6 +13,7 @@ public class DuplicateCharInTwoString{
         findDuplicateCharacters(str1, str2);
         findDuplicateCharacterswithContains(str1, str2);
         findDuplicateCharacterswithRetainAll();
+        findMatchChar();
     }
 
     private static void findDuplicateCharacterswithContains(String str1,String str2){
@@ -36,7 +37,6 @@ public class DuplicateCharInTwoString{
         list2.add("c");
         list2.add("d");
 
-
         list1.retainAll(list2);
         System.out.println(list1);
 
@@ -44,9 +44,8 @@ public class DuplicateCharInTwoString{
 
 
     private static void findDuplicateCharacters(String str1,String str2){
-        final char[] charArray = str1.toCharArray();
-        System.out.println(charArray);
 
+        System.out.println("with out using inbuilt api ...");
         for(char c : str1.toCharArray()){
            // System.out.println("c : " + c +  ", str2.indexOf(c) " + str2.indexOf(c));
             // check if character is present in second string
@@ -55,4 +54,17 @@ public class DuplicateCharInTwoString{
             }
         }
     }
+
+    private static Set<Character> findMatchChar()
+    {
+        Set<Character> hashSet = new HashSet<>();
+        String st = "Ashu";
+        String st2= "Ashish";
+        final Set<Character> collect = Stream.concat(st.chars().mapToObj(ch -> (char) ch),st2.chars().mapToObj(ch -> (char) ch))
+                .filter(ob1 -> !hashSet.add(ob1)).collect(Collectors.toSet());
+        System.out.println("findMatchChar :"+collect);
+        return collect;
+
+    }
+
 }

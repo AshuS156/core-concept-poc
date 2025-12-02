@@ -1,4 +1,4 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
 public class ShiftZeroToLeftOrRight{
     public static void main(String[] args) {

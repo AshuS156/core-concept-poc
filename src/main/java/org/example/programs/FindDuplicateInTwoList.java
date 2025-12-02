@@ -1,4 +1,4 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -15,6 +15,9 @@ public class FindDuplicateInTwoList{
         HashSet<String> hs = new HashSet();
 
         List<String> collect = Stream.concat(al.stream(),al2.stream()).filter(a -> !hs.add(a)).collect(Collectors.toList());
+        System.out.println(collect);
+
+        final List<String> collect1 = al.stream().filter(st1 -> al2.contains(st1)).collect(Collectors.toList());
         System.out.println(collect);
 
     }

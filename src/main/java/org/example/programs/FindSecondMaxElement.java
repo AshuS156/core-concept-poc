@@ -1,4 +1,4 @@
-package org.example.interviewquestions;
+package org.example.programs;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
 import org.example.playwithmap.EmployeeMap;
 import org.example.playwithmap.EmployeeMapUtils;

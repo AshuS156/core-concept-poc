@@ -1,4 +1,4 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
 public class StringExpander{
     public static void main(String[] args) {

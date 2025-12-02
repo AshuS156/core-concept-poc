@@ -1,4 +1,4 @@
-package org.example.importantinterviewquestions;
+package org.example.programs;
 
 import java.util.Collections;
 import java.util.HashMap;
